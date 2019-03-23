@@ -44,9 +44,7 @@ RUN set -ex; \
 	\
 	wget -O /js-yaml.js "https://github.com/nodeca/js-yaml/raw/${JSYAML_VERSION}/dist/js-yaml.js"; \
 # TODO some sort of download verification here
-	\
-	apt-get purge -y --auto-remove wget
-
+	
 RUN mkdir /docker-entrypoint-initdb.d
 
 ENV GPG_KEYS 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
